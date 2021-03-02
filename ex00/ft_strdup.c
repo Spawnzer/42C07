@@ -6,7 +6,7 @@
 /*   By: adubeau <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/26 08:24:27 by adubeau           #+#    #+#             */
-/*   Updated: 2021/02/28 12:09:41 by adubeau          ###   ########.fr       */
+/*   Updated: 2021/03/02 17:37:20 by adubeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ char	*ft_strdup(char *src)
 
 	dest = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
 	dest = ft_strcpy(src, dest);
-	return (!src ? NULL : dest);
+	return (!dest ? NULL : dest);
 }

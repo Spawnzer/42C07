@@ -6,7 +6,7 @@
 /*   By: adubeau <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 09:57:24 by adubeau           #+#    #+#             */
-/*   Updated: 2021/03/02 17:20:15 by adubeau          ###   ########.fr       */
+/*   Updated: 2021/03/02 17:23:21 by adubeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_strjoin(int size, char strs[size][size], char *sep)
 	{
 		ft_strcat(dest, strs[i]);
 		if (i < size - 1)
-			ft_strcat(dest, strs[i]);
+			ft_strcat(dest, sep);
 		i++;
 	}
 	return (dest);
