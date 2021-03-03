@@ -6,7 +6,7 @@
 /*   By: adubeau <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/26 10:54:26 by adubeau           #+#    #+#             */
-/*   Updated: 2021/03/02 17:36:17 by adubeau          ###   ########.fr       */
+/*   Updated: 2021/03/03 10:09:49 by adubeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int		*ft_range(int min, int max)
 	if (min >= max)
 		return (NULL);
 	max -= min;
-	minmax = (int *)malloc(sizeof(int) * (max - min));
+	minmax = malloc(sizeof(int) * max);
+	if (!minmax)
+		return (NULL);
 	while (i < max)
 	{
 		minmax[i] = min + i;

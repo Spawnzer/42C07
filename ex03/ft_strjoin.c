@@ -6,7 +6,7 @@
 /*   By: adubeau <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 09:57:24 by adubeau           #+#    #+#             */
-/*   Updated: 2021/03/02 17:23:21 by adubeau          ###   ########.fr       */
+/*   Updated: 2021/03/03 10:13:25 by adubeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-char	*ft_strjoin(int size, char strs[size][size], char *sep)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int		i;
 	int		j;
@@ -50,7 +50,11 @@ char	*ft_strjoin(int size, char strs[size][size], char *sep)
 	i = 0;
 	j = 0;
 	while (i < size)
-		j += ft_strlen(strs[i++]);
+	{
+		j += ft_strlen(strs[i]);
+		j += ft_strlen(sep);
+		i++;
+	}
 	dest = (char *)malloc(sizeof(char) * (j + 1));
 	if (!dest)
 		return (NULL);
